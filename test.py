@@ -229,7 +229,7 @@ async def on_message(message):
 		if message.author.id == '315237238940106754' :
 			embed = discord.Embed(    
 				title = "📌 공지사항",
-				description= '```' + message.content[4:] + '```',
+				description= '```' + message.content[5:] + '```',
 				color=0xFF0000	
 				)
 			await client.send_message(client.get_channel("688654225286234146"), embed=embed)
