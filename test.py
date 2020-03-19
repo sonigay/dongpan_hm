@@ -73,19 +73,26 @@ async def on_message(message):
 		wks.update_acell('A1', SearchID)
 		result = wks.acell('B1').value
 		result2 = wks2.acell('B2').value
+		result3 = wks.acell('C1').value
 		
 		embed1 = discord.Embed(
-			title = ' 적용일시: ' + result2 + ' 디메릿 안내 ',
+			title = ' 적용일시: ' + result2 + ' 안내 ',
 			description= '**```css\n' + SearchID + '' + result + ' ```**',
 			color=0x4BAF4B
 			)
+		embed3 = discord.Embed(
+			title = '',
+			description= '**```css\n' + result3 + ' ```**',
+			color=0x4BAF4B
+			)		
 		embed2 = discord.Embed(
-			title = SearchID + ' 디메릿 조회!! ',
+			title = SearchID + ' 디메릿 지역 조회!! ',
 			description= '```' "조회자:" + message.author.display_name +"\n거래처:" + message.channel.name + '```',
 			color=0x4BAF4B
 			)
 		await client.send_message(client.get_channel("687385604396417079"), embed=embed2)
-		await client.send_message(message.channel, embed=embed1)		
+		await client.send_message(message.channel, embed=embed1)
+		await client.send_message(message.channel, embed=embed3)
 		
 		
 		
