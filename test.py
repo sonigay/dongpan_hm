@@ -100,15 +100,27 @@ async def on_message(message):
 	if message.content.startswith('!공짜폰'):
 		SearchID = message.content[len('!공짜폰')+1:]
 		gc1 = gspread.authorize(creds1)
-		wks = gc1.open('정책표관리').worksheet('무선공짜출력')
+		wks = gc1.open('정책표관리').worksheet('HM상권무선공짜출력')
+		wks1 = gc1.open('정책표관리').worksheet('HM무선공짜출력')
 		wks.update_acell('A1', SearchID)
+		wks1.update_acell('A1', SearchID)
 		result = wks.acell('B1').value
+		result1 = wks1.acell('B1').value
 		
 		embed1 = discord.Embed(
 			title = ' 오늘의 ' + SearchID + ' 공짜폰 안내 ',
-			description= '**```css\n' + SearchID + '  정책입니다. ' + result + ' ```**',
 			color=0x4BAF4B
 			)
+		embed1.add_field(
+			name="상권 점프개통시",
+			value= '**```css\n' + SearchID + '  정책입니다. ' + result + ' ```**',
+			inline=True
+			)
+		embed1.add_field(
+			name="자체 P코드 개통시",
+			value= '**```css\n' + SearchID + '  정책입니다. ' + result1 + ' ```**',
+			inline=True
+			)		
 		embed2 = discord.Embed(
 			title = SearchID + ' 공짜폰 조회!! ',
 			description= '```' "조회자:" + message.author.display_name +"\n거래처:" + message.channel.name + '```',
