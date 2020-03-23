@@ -109,7 +109,7 @@ async def on_message(message):
 		
 		embed1 = discord.Embed(
 			title = ' 오늘의 ' + SearchID + ' 공짜폰 안내 ',
-			description= '**```css\n' + SearchID + '  정책입니다.\n\n할부원금 0원 공시 현금개통시\n' +SearchID+ ' 공짜폰 마진 ```**',
+			description= '**```css\n할부원금 0원 공시 현금개통시\n' +SearchID+ ' 공짜폰 마진 ```**',
 			color=0x4BAF4B
 			)
 		embed1.add_field(
