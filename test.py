@@ -114,12 +114,12 @@ async def on_message(message):
 			)
 		embed1.add_field(
 			name="상권 점프개통시",
-			value= '**```css\n' + SearchID + '  정책입니다. ' + result + ' ```**',
+			value= '**```css\n' + result + ' ```**',
 			inline=True
 			)
 		embed1.add_field(
 			name="자체 P코드 개통시",
-			value= '**```css\n' + SearchID + '  정책입니다. ' + result1 + ' ```**',
+			value= '**```css\n' + result1 + ' ```**',
 			inline=True
 			)
 		embed1.add_field(
