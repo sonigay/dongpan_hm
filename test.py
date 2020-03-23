@@ -109,6 +109,7 @@ async def on_message(message):
 		
 		embed1 = discord.Embed(
 			title = ' 오늘의 ' + SearchID + ' 공짜폰 안내 ',
+			description= '**```css\n' + SearchID + '  정책입니다.\n\n할부원금 0원 공시 현금개통시\n' +SearchID+ ' 공짜폰 마진 ```**',
 			color=0x4BAF4B
 			)
 		embed1.add_field(
@@ -119,6 +120,11 @@ async def on_message(message):
 		embed1.add_field(
 			name="자체 P코드 개통시",
 			value= '**```css\n' + SearchID + '  정책입니다. ' + result1 + ' ```**',
+			inline=True
+			)
+		embed1.add_field(
+			name="⭐ 주의사항",
+			value= '**```css\n혹시라도 계산이 정확하지 않을수 있으니\n참고만 해주세요.```**',
 			inline=True
 			)		
 		embed2 = discord.Embed(
