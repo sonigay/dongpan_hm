@@ -141,7 +141,7 @@ async def on_message(message):
 	if message.content.startswith('!외국인공짜폰'):
 		SearchID = message.content[len('!외국인공짜폰')+1:]
 		gc1 = gspread.authorize(creds1)
-		wks = gc1.open('정책표관리').worksheet('외국인공짜출력')
+		wks = gc1.open('정책표관리').worksheet('HM외국인공짜출력')
 		wks.update_acell('A1', SearchID)
 		result = wks.acell('B1').value
 		
