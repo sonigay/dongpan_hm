@@ -125,7 +125,7 @@ async def on_message(message):
 		embed1.add_field(
 			name="⭐ 주의사항",
 			value= '**```css\n혹시라도 계산이 정확하지 않을수 있으니\n참고만 해주세요.```**',
-			inline=True
+			inline=False
 			)		
 		embed2 = discord.Embed(
 			title = SearchID + ' 공짜폰 조회!! ',
