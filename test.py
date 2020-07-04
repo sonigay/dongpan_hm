@@ -223,7 +223,7 @@ async def on_message(message):
 		await client.send_message(member, embed=embed)
 		
 
-	if message.content.startswith('!H공지'):
+	if message.content.startswith('!공지'):
 		if message.author.id == '315237238940106754' :
 			embed = discord.Embed(    
 				title = "📌 공지사항",
@@ -343,7 +343,7 @@ async def on_message(message):
 			)
 		embed.add_field(
 			name="🌐 동판관련 명령어 ",
-			value= '```Cs\n# !결합\n\n# !동판 동판\n'+'@ !동판 소호신규\n@ !동판 소호기변\n@ !동판 후결합\n@ !동판 재약정\n@ !동판 재약정단독\n@ !동판 단독\n\n ```',
+			value= '```Cs\n# !결합\n\n# !동판\n\n\n\n\n\n\n\n\n ```',
 			inline = True
 			)
 		embed.add_field(
@@ -385,7 +385,7 @@ async def on_message(message):
 			)
 		embed.add_field(
 			name="🌐 동판관련 명령어 ",
-			value= '```Cs\n# !결합\n\n# !동판 동판\n'+'@ !동판 소호신규\n@ !동판 소호기변\n@ !동판 후결합\n@ !동판 재약정\n@ !동판 재약정단독\n@ !동판 단독\n\n ```',
+			value= '```Cs\n# !결합\n\n# !동판\n\n\n\n\n\n\n\n\n ```',
 			inline = True
 			)
 		embed.add_field(
