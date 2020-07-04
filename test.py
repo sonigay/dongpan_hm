@@ -46,23 +46,12 @@ async def on_message(message):
     
           
 	if message.content.startswith('!동판'):
-		SearchID = message.content[len('!동판')+1:]
-		gc1 = gspread.authorize(creds1)
-		wks = gc1.open('정책표관리').worksheet('동판출력')
-		wks.update_acell('A1', SearchID)
-		result = wks.acell('B1').value
-		embed1 = discord.Embed(
-			title = ' :globe_with_meridians:  ' + SearchID + ' 안내 ',
-			description= '**```css\n' + SearchID + ' 정책입니다. ' + result + ' ```**',
-			color=0x00ffff
-			)
-		embed2 = discord.Embed(
-			title = ' :globe_with_meridians: 동판 ' + SearchID + ' 정책조회!! ',
-			description= '```' "출력자:" + message.author.display_name +"\n거래처:" + message.channel.name + ' ```',
-			color=0x00ffff
-			)
-		await client.send_message(client.get_channel("674653007132229632"), embed=embed2)
-		await client.send_message(message.channel, embed=embed1)
+		embed = discord.Embed(
+		title='',
+		description='```fix\n동판정책 채증이 매우 심한관계로\n담당 영업사원 통해서 구두 확인 바랍니다.```',
+		color=0xf29886
+		)
+		await client.send_message(message.channel, embed=embed)
 		
 		
 	if message.content.startswith('!디메릿'):
