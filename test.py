@@ -89,8 +89,8 @@ async def on_message(message):
 	if message.content.startswith('!공짜폰'):
 		SearchID = message.content[len('!공짜폰')+1:]
 		gc1 = gspread.authorize(creds1)
-		wks = gc1.open('정책표관리').worksheet('A1상권무선공짜출력')
-		wks1 = gc1.open('정책표관리').worksheet('A1무선공짜출력')
+		wks = gc1.open('정책표관리').worksheet('HM상권무선공짜출력')
+		wks1 = gc1.open('정책표관리').worksheet('HM무선공짜출력')
 		wks.update_acell('A1', SearchID)
 		wks1.update_acell('A1', SearchID)
 		result = wks.acell('B1').value
@@ -130,7 +130,7 @@ async def on_message(message):
 	if message.content.startswith('!외국인공짜폰'):
 		SearchID = message.content[len('!외국인공짜폰')+1:]
 		gc1 = gspread.authorize(creds1)
-		wks = gc1.open('정책표관리').worksheet('A1외국인공짜출력')
+		wks = gc1.open('정책표관리').worksheet('HM외국인공짜출력')
 		wks.update_acell('A1', SearchID)
 		result = wks.acell('B1').value
 		
