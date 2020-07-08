@@ -398,7 +398,7 @@ async def on_message(message):
 		await client.send_message(member, embed=embed)
 		
 
-	if message.content.startswith('!공지'):
+	if message.content.startswith('!전달'):
 		if message.author.id == '315237238940106754' :
 			embed = discord.Embed(    
 				title = "📌 공지사항",
