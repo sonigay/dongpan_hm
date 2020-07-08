@@ -399,7 +399,7 @@ async def on_message(message):
 		
 
 	if message.content.startswith('!전달'):
-		if message.author.id == '315237238940106754' :
+		if message.author.id == '315237238940106754' or message.author.id == '329988391812726784' :
 			embed = discord.Embed(    
 				title = "📌 공지사항",
 				description= '```' + message.content[5:] + '```',
