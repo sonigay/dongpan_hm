@@ -518,7 +518,7 @@ async def on_message(message):
 			)
 		embed.add_field(
 			name="🌐 동판관련 명령어 ",
-			value= '```Cs\n# !결합\n\n# !동판\n\n\n\n\n\n\n\n\n ```',
+			value= '```Cs\n# !결합\n\n# !동판\n\n# !인터넷요금\n\n\n\n\n\n ```',
 			inline = True
 			)
 		embed.add_field(
@@ -560,7 +560,7 @@ async def on_message(message):
 			)
 		embed.add_field(
 			name="🌐 동판관련 명령어 ",
-			value= '```Cs\n# !결합\n\n# !동판\n\n\n\n\n\n\n\n\n ```',
+			value= '```Cs\n# !결합\n\n# !동판\n\n# !인터넷요금\n\n\n\n\n\n ```',
 			inline = True
 			)
 		embed.add_field(
