@@ -119,7 +119,7 @@ async def on_message(message):
 				value='```' + result24 + '```',
 				inline = False
 				)
-			embed1.add_field(
+			embed.add_field(
 				name= result25,
 				value='```' + result26 +"\n"+ result27 + '```',
 				inline = False
