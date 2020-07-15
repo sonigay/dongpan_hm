@@ -79,8 +79,10 @@ async def on_message(message):
 			result21 = wks.acell('AD6').value # 동판 상품권금액
 			result22 = wks.acell('AI6').value # 동판 IOT추가
 			result23 = wks.acell('AK6').value # 동판 , 후결합 셋탑추가
-			result24 = wks.acell('AM6').value # 동판 TV프리2추가	
-	
+			result24 = wks.acell('AM6').value # 동판 TV프리2추가
+			result25 = wks.acell('AO3').value # 단독 TV프리2 설명
+			result26 = wks.acell('AO6').value # 단독 TV프리2 프리미엄
+			result27 = wks.acell('AO7').value # 단독 TV프리2 설명
 	
 			embed = discord.Embed(
 				title='🌐 유선 동판 정책',
@@ -115,6 +117,11 @@ async def on_message(message):
 			embed.add_field(
 				name= result20,
 				value='```' + result24 + '```',
+				inline = False
+				)
+			embed1.add_field(
+				name= result25,
+				value='```' + result26 +"\n"+ result27 + '```',
 				inline = False
 				)
 			embed1 = discord.Embed(
