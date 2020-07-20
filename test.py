@@ -251,7 +251,7 @@ async def on_message(message):
 		if message.channel.id == '667243782604849155' or message.channel.id == '667245522549211138' or message.channel.id == '667246234851082240' or message.channel.id == '667245576014004256':
 			gc1 = gspread.authorize(creds1)		
 			wks = gc1.open('정책표관리').worksheet('동판구두2')
-			result0 = wks.acell('au1').value #정책 적용일시
+			result0 = wks.acell('au1').value #후결합 모바일 적용일시
 			result = wks.acell('au2').value #정책 적용일시
 			result1 = wks.acell('h6').value # 광기가동판 TV프리미엄 모바일 신규/MNP
 			result2 = wks.acell('h19').value # 광기가동판 TV프리미엄 모바일 재가입/정책기변
