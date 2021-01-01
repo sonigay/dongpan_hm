@@ -154,7 +154,7 @@ async def on_message(message):
 				)
 			embed1.add_field(
 				name="TV상품",
-				value='```💚TV(P)/(B)```',
+				value='```💚TV(P)/(B)\n(TV일반요금제제외)```',
 				inline = True
 				)
 			embed1.add_field(
@@ -189,7 +189,7 @@ async def on_message(message):
 				)
 			embed2.add_field(
 				name="TV상품",
-				value='```💛TV(P)/(B)```',
+				value='```💛TV(P)/(B)\n(TV일반요금제제외)```',
 				inline = True
 				)
 			embed2.add_field(
@@ -224,7 +224,7 @@ async def on_message(message):
 				)
 			embed3.add_field(
 				name="TV상품",
-				value='```💙TV(P)/(B)```',
+				value='```💙TV(P)/(B)\n(TV일반요금제제외)```',
 				inline = True
 				)
 			embed3.add_field(
@@ -342,7 +342,7 @@ async def on_message(message):
 			)
 		embed1.add_field(
 			name="TV상품",
-			value='```💚TV(P)/(B)```',
+			value='```💚TV(P)/(B)\n(TV일반요금제제외)```',
 			inline = True
 			)
 		embed1.add_field(
@@ -377,7 +377,7 @@ async def on_message(message):
 			)
 		embed2.add_field(
 			name="TV상품",
-			value='```💛TV(P)/(B)```',
+			value='```💛TV(P)/(B)\n(TV일반요금제제외)```',
 			inline = True
 			)
 		embed2.add_field(
@@ -412,7 +412,7 @@ async def on_message(message):
 			)
 		embed3.add_field(
 			name="TV상품",
-			value='```💙TV(P)/(B)```',
+			value='```💙TV(P)/(B)\n(TV일반요금제제외)```',
 			inline = True
 			)
 		embed3.add_field(
