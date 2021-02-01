@@ -47,7 +47,7 @@ async def on_message(message):
 			
 # 동판채증 문구 안나오는 채널  
 	if message.content.startswith('!동판'):
-		if message.channel.id != (691736848325672960) and message.channel.id != (729579799907008544) and message.channel.id != (689426260484423741) and message.channel.id != (689426603184619563) and message.channel.id != (689423874307522589):
+		if message.channel.id != (691736848325672960) and message.channel.id != (688654225286234146) and message.channel.id != (729579799907008544) and message.channel.id != (689426260484423741) and message.channel.id != (689426603184619563) and message.channel.id != (689423874307522589):
 			embed = discord.Embed(
 			title='',
 			description='```fix\n동판정책 채증이 매우 심한관계로\n담당 영업사원 통해서 구두 확인 바랍니다.```',
@@ -57,7 +57,7 @@ async def on_message(message):
 		
 # 동판 나오는 채널 홍남옥영업2 , 노성수대표님 , 케이플러스 , 케이에스모바일 , 에이치엔씨운정 , MS컴퍼니 	
 	if message.content == '!동판':
-		if message.channel.id == (691736848325672960) or message.channel.id == (729579799907008544) or message.channel.id == (689426260484423741) or message.channel.id == (689426603184619563) or message.channel.id == (689423874307522589) or message.channel.id == (689426280738979921):
+		if message.channel.id == (691736848325672960) or message.channel.id == (688654225286234146) or message.channel.id == (729579799907008544) or message.channel.id == (689426260484423741) or message.channel.id == (689426603184619563) or message.channel.id == (689423874307522589) or message.channel.id == (689426280738979921):
 			gc1 = gspread.authorize(creds1)		
 			wks = gc1.open('정책표관리').worksheet('동판구두2')
 			result = wks.acell('au2').value #정책 적용일시
