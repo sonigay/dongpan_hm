@@ -46,585 +46,585 @@ async def on_message(message):
     
 			
 # 동판채증 문구 안나오는 채널  홍남옥영업2 , 케이알1 케이알2 케이알3 케이알5 케이알6 
-	if message.content.startswith('!동판'):
-		if message.channel.id != (691736848325672960) and message.channel.id != (689427184443588632) and message.channel.id != (689427209018015842) and message.channel.id != (689427243008655360) and message.channel.id != (689427387859206168) and message.channel.id != (689427632181477471):
-			embed = discord.Embed(
-			title='',
-			description='```fix\n동판정책 채증이 매우 심한관계로\n담당 영업사원 통해서 구두 확인 바랍니다.```',
-			color=0xf29886
-			)
-			await message.channel.send(embed=embed)
+# 	if message.content.startswith('!동판'):
+# 		if message.channel.id != (691736848325672960) and message.channel.id != (689427184443588632) and message.channel.id != (689427209018015842) and message.channel.id != (689427243008655360) and message.channel.id != (689427387859206168) and message.channel.id != (689427632181477471):
+# 			embed = discord.Embed(
+# 			title='',
+# 			description='```fix\n동판정책 채증이 매우 심한관계로\n담당 영업사원 통해서 구두 확인 바랍니다.```',
+# 			color=0xf29886
+# 			)
+# 			await message.channel.send(embed=embed)
 		
-# 동판 나오는 채널 홍남옥영업2 , 케이알1 케이알2 케이알3 케이알5 케이알6 	
-	if message.content == '!동판':
-		if message.channel.id == (691736848325672960) or message.channel.id == (689427184443588632) or message.channel.id == (689427209018015842) or message.channel.id == (689427243008655360) or message.channel.id == (689427387859206168) or message.channel.id == (689427632181477471):
-			gc1 = gspread.authorize(creds1)		
-			wks = gc1.open('정책표관리').worksheet('동판구두2')
-			result = wks.acell('au2').value #정책 적용일시
-			result1 = wks.acell('C6').value # 광기가동판 TV프리미엄 모바일 신규/MNP
-			result2 = wks.acell('D6').value # 광기가동판 TV프리미엄 모바일 재가입/정책기변
-			result3 = wks.acell('C7').value # 광기가동판 TV베이직 모바일 신규/MNP
-			result4 = wks.acell('D7').value # 광기가동판 TV베이직 모바일 재가입/정책기변
-			result5 = wks.acell('C8').value # 광기가동판 TV베이직 모바일 신규/MNP
-			result6 = wks.acell('D8').value # 광기가동판 TV베이직 모바일 재가입/정책기변
-			result7 = wks.acell('C10').value # 슬림동판 TV프리미엄 모바일 신규/MNP
-			result8 = wks.acell('D10').value # 슬림동판 TV프리미엄 모바일 재가입/정책기변
-			result9 = wks.acell('C11').value # 슬림동판 TV베이직 모바일 신규/MNP
-			result10 = wks.acell('D11').value # 슬림동판 TV베이직 모바일 재가입/정책기변
-			result11 = wks.acell('C12').value # 광랜동판 TV프리미엄 모바일 신규/MNP
-			result12 = wks.acell('D12').value # 광랜동판 TV프리미엄 모바일 재가입/정책기변
-			result13 = wks.acell('C14').value # 광랜동판 TV베이직 모바일 신규/MNP
-			result14 = wks.acell('D14').value # 광랜동판 TV베이직 모바일 재가입/정책기변
-			result15 = wks.acell('C15').value # 광기가동판 TV베이직 모바일 신규/MNP
-			result16 = wks.acell('D15').value # 광기가동판 TV베이직 모바일 재가입/정책기변
-			result17 = wks.acell('C16').value # 광기가동판 TV베이직 모바일 신규/MNP
-			result18 = wks.acell('D16').value # 광기가동판 TV베이직 모바일 재가입/정책기변
-			result19 = wks.acell('AD3').value # 상품권추가
-			result20 = wks.acell('AI3').value # IOT추가
-			result21 = wks.acell('AK3').value # 셋탑추가
-			result22 = wks.acell('AM3').value # TV프리2추가
-			result23 = wks.acell('AD6').value # 동판 상품권금액
-			result24 = wks.acell('AI6').value # 동판 IOT추가
-			result25 = wks.acell('AK6').value # 동판 , 후결합 셋탑추가
-			result26 = wks.acell('AM6').value # 동판 TV프리2추가
-			result27 = wks.acell('AO3').value # 단독 TV프리2 설명
-			result28 = wks.acell('AO6').value # 단독 TV프리2 프리미엄
-			result29 = wks.acell('AO7').value # 단독 TV프리2 설명
-			result30 = wks.acell('AU3').value # 단독 TV프리2 설명
-			result31 = wks.acell('AU6').value # 단독 TV프리2 설명
-			result32 = wks.acell('As3').value # 안정화
-			result33 = wks.acell('As6').value # 안정화
-			result34 = wks.acell('c9').value # 광기가동판 모바일 신규/MNP
-			result35 = wks.acell('d9').value # 광기가동판 모바일 재가입/정책기변			
-			result36 = wks.acell('c13').value # 슬림동판 모바일 신규/MNP			
-			result37 = wks.acell('d13').value # 슬림동판 모바일 재가입/정책기변			
-			result38 = wks.acell('c17').value # 광랜동판 모바일 신규/MNP			
-			result39 = wks.acell('d17').value # 광랜동판 모바일 재가입/정책기변				
+# # 동판 나오는 채널 홍남옥영업2 , 케이알1 케이알2 케이알3 케이알5 케이알6 	
+# 	if message.content == '!동판':
+# 		if message.channel.id == (691736848325672960) or message.channel.id == (689427184443588632) or message.channel.id == (689427209018015842) or message.channel.id == (689427243008655360) or message.channel.id == (689427387859206168) or message.channel.id == (689427632181477471):
+# 			gc1 = gspread.authorize(creds1)		
+# 			wks = gc1.open('정책표관리').worksheet('동판구두2')
+# 			result = wks.acell('au2').value #정책 적용일시
+# 			result1 = wks.acell('C6').value # 광기가동판 TV프리미엄 모바일 신규/MNP
+# 			result2 = wks.acell('D6').value # 광기가동판 TV프리미엄 모바일 재가입/정책기변
+# 			result3 = wks.acell('C7').value # 광기가동판 TV베이직 모바일 신규/MNP
+# 			result4 = wks.acell('D7').value # 광기가동판 TV베이직 모바일 재가입/정책기변
+# 			result5 = wks.acell('C8').value # 광기가동판 TV베이직 모바일 신규/MNP
+# 			result6 = wks.acell('D8').value # 광기가동판 TV베이직 모바일 재가입/정책기변
+# 			result7 = wks.acell('C10').value # 슬림동판 TV프리미엄 모바일 신규/MNP
+# 			result8 = wks.acell('D10').value # 슬림동판 TV프리미엄 모바일 재가입/정책기변
+# 			result9 = wks.acell('C11').value # 슬림동판 TV베이직 모바일 신규/MNP
+# 			result10 = wks.acell('D11').value # 슬림동판 TV베이직 모바일 재가입/정책기변
+# 			result11 = wks.acell('C12').value # 광랜동판 TV프리미엄 모바일 신규/MNP
+# 			result12 = wks.acell('D12').value # 광랜동판 TV프리미엄 모바일 재가입/정책기변
+# 			result13 = wks.acell('C14').value # 광랜동판 TV베이직 모바일 신규/MNP
+# 			result14 = wks.acell('D14').value # 광랜동판 TV베이직 모바일 재가입/정책기변
+# 			result15 = wks.acell('C15').value # 광기가동판 TV베이직 모바일 신규/MNP
+# 			result16 = wks.acell('D15').value # 광기가동판 TV베이직 모바일 재가입/정책기변
+# 			result17 = wks.acell('C16').value # 광기가동판 TV베이직 모바일 신규/MNP
+# 			result18 = wks.acell('D16').value # 광기가동판 TV베이직 모바일 재가입/정책기변
+# 			result19 = wks.acell('AD3').value # 상품권추가
+# 			result20 = wks.acell('AI3').value # IOT추가
+# 			result21 = wks.acell('AK3').value # 셋탑추가
+# 			result22 = wks.acell('AM3').value # TV프리2추가
+# 			result23 = wks.acell('AD6').value # 동판 상품권금액
+# 			result24 = wks.acell('AI6').value # 동판 IOT추가
+# 			result25 = wks.acell('AK6').value # 동판 , 후결합 셋탑추가
+# 			result26 = wks.acell('AM6').value # 동판 TV프리2추가
+# 			result27 = wks.acell('AO3').value # 단독 TV프리2 설명
+# 			result28 = wks.acell('AO6').value # 단독 TV프리2 프리미엄
+# 			result29 = wks.acell('AO7').value # 단독 TV프리2 설명
+# 			result30 = wks.acell('AU3').value # 단독 TV프리2 설명
+# 			result31 = wks.acell('AU6').value # 단독 TV프리2 설명
+# 			result32 = wks.acell('As3').value # 안정화
+# 			result33 = wks.acell('As6').value # 안정화
+# 			result34 = wks.acell('c9').value # 광기가동판 모바일 신규/MNP
+# 			result35 = wks.acell('d9').value # 광기가동판 모바일 재가입/정책기변			
+# 			result36 = wks.acell('c13').value # 슬림동판 모바일 신규/MNP			
+# 			result37 = wks.acell('d13').value # 슬림동판 모바일 재가입/정책기변			
+# 			result38 = wks.acell('c17').value # 광랜동판 모바일 신규/MNP			
+# 			result39 = wks.acell('d17').value # 광랜동판 모바일 재가입/정책기변				
 			
 	
-			embed = discord.Embed(
-				title='🌐 유선 동판 정책',
-				description= '```정책 적용 일시내 모바일 개통 및 설치, 결합시 적용```',
-				color=0x00ffff
-				)
-			embed.add_field(
-				name="⌛ 정책 적용 일시",
-				value='```' + result + '```',
-				inline = False
-				)
-			embed.add_field(
-				name="📍 유의사항",
-				value='```diff\n-■ 본사 사은품은 3년약정 동판시 지급\n-■ 소호 동판은 개인사업자만 가능(법인 결합 불가)\n-■ (정상요금8회) 미만 요금 납부 후 해지시 수수료 환수\n-■ 해지후 재가입시 수수료 전액 환수\n-  (동일장소 재설치및 가족명의 등)```',
-				inline = False
-				)
-			embed.add_field(
-				name= result19,
-				value='```' + result23 + '```',
-				inline = False
-				)
-			embed.add_field(
-				name= result20,
-				value='```' + result24 + '```',
-				inline = False
-				)
-			embed.add_field(
-				name= result21,
-				value='```' + result25 + '```',
-				inline = False
-				)
-			embed.add_field(
-				name= result22,
-				value='```' + result26 + '```',
-				inline = False
-				)
-			embed.add_field(
-				name= result27,
-				value='```' + result28 +"\n"+ result29 + '```',
-				inline = False
-				)
-			embed.add_field(
-				name= result30,
-				value='```' + result31 + '```',
-				inline = False
-				)
-			embed.add_field(
-				name= result32,
-				value='```diff\n' + result33 + '```',
-				inline = False
-				)			
-			embed1 = discord.Embed(
-				title='',
-				description= '```-------------💚광기가(1기가)-------------```',
-				color=0x83ff30
-				)
-			embed1.add_field(
-				name="TV상품",
-				value='```💚TV(17↑)```',
-				inline = True
-				)
-			embed1.add_field(
-				name="모바일( 신규/MNP )",
-				value='```' + result1 + '```',
-				inline = True
-				)
-			embed1.add_field(
-				name="모바일(재가입/기변)",
-				value='```' + result2 + '```',
-				inline = True
-				)
-			embed1.add_field(
-				name="TV상품",
-				value='```💚TV(프리미엄)```',
-				inline = True
-				)
-			embed1.add_field(
-				name="모바일( 신규/MNP )",
-				value='```' + result3 + '```',
-				inline = True
-				)
-			embed1.add_field(
-				name="모바일(재가입/기변 )",
-				value='```' + result4 + '```',
-				inline = True
-				)
-			embed1.add_field(
-				name="TV상품",
-				value='```💚TV(베이직)```',
-				inline = True
-				)
-			embed1.add_field(
-				name="모바일( 신규/MNP )",
-				value='```' + result5 + '```',
-				inline = True
-				)
-			embed1.add_field(
-				name="모바일(재가입/기변)",
-				value='```' + result6 + '```',
-				inline = True
-				)
-			embed1.add_field(
-				name="TV상품",
-				value='```💚TV(미포함)```',
-				inline = True
-				)
-			embed1.add_field(
-				name="모바일( 신규/MNP )",
-				value='```' + result34 + '```',
-				inline = True
-				)
-			embed1.add_field(
-				name="모바일(재가입/기변)",
-				value='```' + result35 + '```',
-				inline = True
-				)			
-			embed2 = discord.Embed(
-				title='',
-				description= '```-------------💛슬림(500메가)-------------```',
-				color=0xf9ff27
-				)
-			embed2.add_field(
-				name="TV상품",
-				value='```💛TV(17↑)```',
-				inline = True
-				)
-			embed2.add_field(
-				name="모바일( 신규/MNP )",
-				value='```' + result7 + '```',
-				inline = True
-				)
-			embed2.add_field(
-				name="모바일(재가입/기변)",
-				value='```' + result8 + '```',
-				inline = True
-				)
-			embed2.add_field(
-				name="TV상품",
-				value='```💛TV(프리미엄)```',
-				inline = True
-				)
-			embed2.add_field(
-				name="모바일( 신규/MNP )",
-				value='```' + result9 + '```',
-				inline = True
-				)
-			embed2.add_field(
-				name="모바일(재가입/기변)",
-				value='```' + result10 + '```',
-				inline = True
-				)
-			embed2.add_field(
-				name="TV상품",
-				value='```💛TV(베이직)```',
-				inline = True
-				)
-			embed2.add_field(
-				name="모바일( 신규/MNP )",
-				value='```' + result11 + '```',
-				inline = True
-				)
-			embed2.add_field(
-				name="모바일(재가입/기변)",
-				value='```' + result12 + '```',
-				inline = True
-				)
-			embed2.add_field(
-				name="TV상품",
-				value='```💛TV(미포함)```',
-				inline = True
-				)
-			embed2.add_field(
-				name="모바일( 신규/MNP )",
-				value='```' + result36 + '```',
-				inline = True
-				)
-			embed2.add_field(
-				name="모바일(재가입/기변)",
-				value='```' + result37 + '```',
-				inline = True
-				)
+# 			embed = discord.Embed(
+# 				title='🌐 유선 동판 정책',
+# 				description= '```정책 적용 일시내 모바일 개통 및 설치, 결합시 적용```',
+# 				color=0x00ffff
+# 				)
+# 			embed.add_field(
+# 				name="⌛ 정책 적용 일시",
+# 				value='```' + result + '```',
+# 				inline = False
+# 				)
+# 			embed.add_field(
+# 				name="📍 유의사항",
+# 				value='```diff\n-■ 본사 사은품은 3년약정 동판시 지급\n-■ 소호 동판은 개인사업자만 가능(법인 결합 불가)\n-■ (정상요금8회) 미만 요금 납부 후 해지시 수수료 환수\n-■ 해지후 재가입시 수수료 전액 환수\n-  (동일장소 재설치및 가족명의 등)```',
+# 				inline = False
+# 				)
+# 			embed.add_field(
+# 				name= result19,
+# 				value='```' + result23 + '```',
+# 				inline = False
+# 				)
+# 			embed.add_field(
+# 				name= result20,
+# 				value='```' + result24 + '```',
+# 				inline = False
+# 				)
+# 			embed.add_field(
+# 				name= result21,
+# 				value='```' + result25 + '```',
+# 				inline = False
+# 				)
+# 			embed.add_field(
+# 				name= result22,
+# 				value='```' + result26 + '```',
+# 				inline = False
+# 				)
+# 			embed.add_field(
+# 				name= result27,
+# 				value='```' + result28 +"\n"+ result29 + '```',
+# 				inline = False
+# 				)
+# 			embed.add_field(
+# 				name= result30,
+# 				value='```' + result31 + '```',
+# 				inline = False
+# 				)
+# 			embed.add_field(
+# 				name= result32,
+# 				value='```diff\n' + result33 + '```',
+# 				inline = False
+# 				)			
+# 			embed1 = discord.Embed(
+# 				title='',
+# 				description= '```-------------💚광기가(1기가)-------------```',
+# 				color=0x83ff30
+# 				)
+# 			embed1.add_field(
+# 				name="TV상품",
+# 				value='```💚TV(17↑)```',
+# 				inline = True
+# 				)
+# 			embed1.add_field(
+# 				name="모바일( 신규/MNP )",
+# 				value='```' + result1 + '```',
+# 				inline = True
+# 				)
+# 			embed1.add_field(
+# 				name="모바일(재가입/기변)",
+# 				value='```' + result2 + '```',
+# 				inline = True
+# 				)
+# 			embed1.add_field(
+# 				name="TV상품",
+# 				value='```💚TV(프리미엄)```',
+# 				inline = True
+# 				)
+# 			embed1.add_field(
+# 				name="모바일( 신규/MNP )",
+# 				value='```' + result3 + '```',
+# 				inline = True
+# 				)
+# 			embed1.add_field(
+# 				name="모바일(재가입/기변 )",
+# 				value='```' + result4 + '```',
+# 				inline = True
+# 				)
+# 			embed1.add_field(
+# 				name="TV상품",
+# 				value='```💚TV(베이직)```',
+# 				inline = True
+# 				)
+# 			embed1.add_field(
+# 				name="모바일( 신규/MNP )",
+# 				value='```' + result5 + '```',
+# 				inline = True
+# 				)
+# 			embed1.add_field(
+# 				name="모바일(재가입/기변)",
+# 				value='```' + result6 + '```',
+# 				inline = True
+# 				)
+# 			embed1.add_field(
+# 				name="TV상품",
+# 				value='```💚TV(미포함)```',
+# 				inline = True
+# 				)
+# 			embed1.add_field(
+# 				name="모바일( 신규/MNP )",
+# 				value='```' + result34 + '```',
+# 				inline = True
+# 				)
+# 			embed1.add_field(
+# 				name="모바일(재가입/기변)",
+# 				value='```' + result35 + '```',
+# 				inline = True
+# 				)			
+# 			embed2 = discord.Embed(
+# 				title='',
+# 				description= '```-------------💛슬림(500메가)-------------```',
+# 				color=0xf9ff27
+# 				)
+# 			embed2.add_field(
+# 				name="TV상품",
+# 				value='```💛TV(17↑)```',
+# 				inline = True
+# 				)
+# 			embed2.add_field(
+# 				name="모바일( 신규/MNP )",
+# 				value='```' + result7 + '```',
+# 				inline = True
+# 				)
+# 			embed2.add_field(
+# 				name="모바일(재가입/기변)",
+# 				value='```' + result8 + '```',
+# 				inline = True
+# 				)
+# 			embed2.add_field(
+# 				name="TV상품",
+# 				value='```💛TV(프리미엄)```',
+# 				inline = True
+# 				)
+# 			embed2.add_field(
+# 				name="모바일( 신규/MNP )",
+# 				value='```' + result9 + '```',
+# 				inline = True
+# 				)
+# 			embed2.add_field(
+# 				name="모바일(재가입/기변)",
+# 				value='```' + result10 + '```',
+# 				inline = True
+# 				)
+# 			embed2.add_field(
+# 				name="TV상품",
+# 				value='```💛TV(베이직)```',
+# 				inline = True
+# 				)
+# 			embed2.add_field(
+# 				name="모바일( 신규/MNP )",
+# 				value='```' + result11 + '```',
+# 				inline = True
+# 				)
+# 			embed2.add_field(
+# 				name="모바일(재가입/기변)",
+# 				value='```' + result12 + '```',
+# 				inline = True
+# 				)
+# 			embed2.add_field(
+# 				name="TV상품",
+# 				value='```💛TV(미포함)```',
+# 				inline = True
+# 				)
+# 			embed2.add_field(
+# 				name="모바일( 신규/MNP )",
+# 				value='```' + result36 + '```',
+# 				inline = True
+# 				)
+# 			embed2.add_field(
+# 				name="모바일(재가입/기변)",
+# 				value='```' + result37 + '```',
+# 				inline = True
+# 				)
 			
-			embed3 = discord.Embed(
-				title='',
-				description= '```-------------💙광랜(100메가)-------------```',
-				color=0x3862ff
-				)
-			embed3.add_field(
-				name="TV상품",
-				value='```💙TV(17↑)```',
-				inline = True
-				)
-			embed3.add_field(
-				name="모바일( 신규/MNP )",
-				value='```' + result13 + '```',
-				inline = True
-				)
-			embed3.add_field(
-				name="모바일(재가입/기변)",
-				value='```' + result14 + '```',
-				inline = True
-				)
-			embed3.add_field(
-				name="TV상품",
-				value='```💙TV(프리미엄)```',
-				inline = True
-				)
-			embed3.add_field(
-				name="모바일( 신규/MNP )",
-				value='```' + result15 + '```',
-				inline = True
-				)
-			embed3.add_field(
-				name="모바일(재가입/기변)",
-				value='```' + result16 + '```',
-				inline = True
-				)
-			embed3.add_field(
-				name="TV상품",
-				value='```💙TV(베이직)```',
-				inline = True
-				)
-			embed3.add_field(
-				name="모바일( 신규/MNP )",
-				value='```' + result17 + '```',
-				inline = True
-				)
-			embed3.add_field(
-				name="모바일(재가입/기변)",
-				value='```' + result18 + '```',
-				inline = True
-				)
-			embed3.add_field(
-				name="TV상품",
-				value='```💙TV(미포함)```',
-				inline = True
-				)
-			embed3.add_field(
-				name="모바일( 신규/MNP )",
-				value='```' + result38 + '```',
-				inline = True
-				)
-			embed3.add_field(
-				name="모바일(재가입/기변)",
-				value='```' + result39 + '```',
-				inline = True
-				)			
+# 			embed3 = discord.Embed(
+# 				title='',
+# 				description= '```-------------💙광랜(100메가)-------------```',
+# 				color=0x3862ff
+# 				)
+# 			embed3.add_field(
+# 				name="TV상품",
+# 				value='```💙TV(17↑)```',
+# 				inline = True
+# 				)
+# 			embed3.add_field(
+# 				name="모바일( 신규/MNP )",
+# 				value='```' + result13 + '```',
+# 				inline = True
+# 				)
+# 			embed3.add_field(
+# 				name="모바일(재가입/기변)",
+# 				value='```' + result14 + '```',
+# 				inline = True
+# 				)
+# 			embed3.add_field(
+# 				name="TV상품",
+# 				value='```💙TV(프리미엄)```',
+# 				inline = True
+# 				)
+# 			embed3.add_field(
+# 				name="모바일( 신규/MNP )",
+# 				value='```' + result15 + '```',
+# 				inline = True
+# 				)
+# 			embed3.add_field(
+# 				name="모바일(재가입/기변)",
+# 				value='```' + result16 + '```',
+# 				inline = True
+# 				)
+# 			embed3.add_field(
+# 				name="TV상품",
+# 				value='```💙TV(베이직)```',
+# 				inline = True
+# 				)
+# 			embed3.add_field(
+# 				name="모바일( 신규/MNP )",
+# 				value='```' + result17 + '```',
+# 				inline = True
+# 				)
+# 			embed3.add_field(
+# 				name="모바일(재가입/기변)",
+# 				value='```' + result18 + '```',
+# 				inline = True
+# 				)
+# 			embed3.add_field(
+# 				name="TV상품",
+# 				value='```💙TV(미포함)```',
+# 				inline = True
+# 				)
+# 			embed3.add_field(
+# 				name="모바일( 신규/MNP )",
+# 				value='```' + result38 + '```',
+# 				inline = True
+# 				)
+# 			embed3.add_field(
+# 				name="모바일(재가입/기변)",
+# 				value='```' + result39 + '```',
+# 				inline = True
+# 				)			
 
-			await message.channel.send(embed=embed)
-			await message.channel.send(embed=embed1)
-			await message.channel.send(embed=embed2)
-			await message.channel.send(embed=embed3)
+# 			await message.channel.send(embed=embed)
+# 			await message.channel.send(embed=embed1)
+# 			await message.channel.send(embed=embed2)
+# 			await message.channel.send(embed=embed3)
 			
 		
 		
 	
-	if message.content == '!후결합동판':
-		gc1 = gspread.authorize(creds1)		
-		wks = gc1.open('정책표관리').worksheet('동판구두2')
-		result0 = wks.acell('au1').value #정책 적용일시
-		result = wks.acell('au2').value #정책 적용일시
-		result1 = wks.acell('E6').value # 광기가동판 TV프리미엄 모바일 신규/MNP
-		result2 = wks.acell('F6').value # 광기가동판 TV프리미엄 모바일 재가입/정책기변
-		result3 = wks.acell('E7').value # 광기가동판 TV베이직 모바일 신규/MNP
-		result4 = wks.acell('F7').value # 광기가동판 TV베이직 모바일 재가입/정책기변
-		result5 = wks.acell('E8').value # 광기가동판 TV베이직 모바일 신규/MNP
-		result6 = wks.acell('F8').value # 광기가동판 TV베이직 모바일 재가입/정책기변
-		result7 = wks.acell('E10').value # 슬림동판 TV프리미엄 모바일 신규/MNP
-		result8 = wks.acell('F10').value # 슬림동판 TV프리미엄 모바일 재가입/정책기변
-		result9 = wks.acell('E11').value # 슬림동판 TV베이직 모바일 신규/MNP
-		result10 = wks.acell('F11').value # 슬림동판 TV베이직 모바일 재가입/정책기변
-		result11 = wks.acell('E12').value # 광랜동판 TV프리미엄 모바일 신규/MNP
-		result12 = wks.acell('F12').value # 광랜동판 TV프리미엄 모바일 재가입/정책기변
-		result13 = wks.acell('E14').value # 광랜동판 TV베이직 모바일 신규/MNP
-		result14 = wks.acell('F14').value # 광랜동판 TV베이직 모바일 재가입/정책기변
-		result15 = wks.acell('E15').value # 광기가동판 TV베이직 모바일 신규/MNP
-		result16 = wks.acell('F15').value # 광기가동판 TV베이직 모바일 재가입/정책기변
-		result17 = wks.acell('E16').value # 광기가동판 TV베이직 모바일 신규/MNP
-		result18 = wks.acell('F16').value # 광기가동판 TV베이직 모바일 재가입/정책기변
-		result19 = wks.acell('AD3').value # 상품권추가
-		result20 = wks.acell('AI3').value # IOT추가
-		result21 = wks.acell('AK3').value # 셋탑추가
-		result22 = wks.acell('AM3').value # TV프리2추가
-		result23 = wks.acell('AD6').value # 동판 상품권금액
-		result24 = wks.acell('AI6').value # 동판 IOT추가
-		result25 = wks.acell('AK6').value # 동판 , 후결합 셋탑추가
-		result26 = wks.acell('AM6').value # 동판 TV프리2추가
-		result27 = wks.acell('AO3').value # 단독 TV프리2 설명
-		result28 = wks.acell('AO6').value # 단독 TV프리2 프리미엄
-		result29 = wks.acell('AO7').value # 단독 TV프리2 설명
-		result30 = wks.acell('AU3').value # 단독 TV프리2 설명
-		result31 = wks.acell('AU6').value # 단독 TV프리2 설명
-		result32 = wks.acell('As3').value # 안정화
-		result33 = wks.acell('As6').value # 안정화
+# 	if message.content == '!후결합동판':
+# 		gc1 = gspread.authorize(creds1)		
+# 		wks = gc1.open('정책표관리').worksheet('동판구두2')
+# 		result0 = wks.acell('au1').value #정책 적용일시
+# 		result = wks.acell('au2').value #정책 적용일시
+# 		result1 = wks.acell('E6').value # 광기가동판 TV프리미엄 모바일 신규/MNP
+# 		result2 = wks.acell('F6').value # 광기가동판 TV프리미엄 모바일 재가입/정책기변
+# 		result3 = wks.acell('E7').value # 광기가동판 TV베이직 모바일 신규/MNP
+# 		result4 = wks.acell('F7').value # 광기가동판 TV베이직 모바일 재가입/정책기변
+# 		result5 = wks.acell('E8').value # 광기가동판 TV베이직 모바일 신규/MNP
+# 		result6 = wks.acell('F8').value # 광기가동판 TV베이직 모바일 재가입/정책기변
+# 		result7 = wks.acell('E10').value # 슬림동판 TV프리미엄 모바일 신규/MNP
+# 		result8 = wks.acell('F10').value # 슬림동판 TV프리미엄 모바일 재가입/정책기변
+# 		result9 = wks.acell('E11').value # 슬림동판 TV베이직 모바일 신규/MNP
+# 		result10 = wks.acell('F11').value # 슬림동판 TV베이직 모바일 재가입/정책기변
+# 		result11 = wks.acell('E12').value # 광랜동판 TV프리미엄 모바일 신규/MNP
+# 		result12 = wks.acell('F12').value # 광랜동판 TV프리미엄 모바일 재가입/정책기변
+# 		result13 = wks.acell('E14').value # 광랜동판 TV베이직 모바일 신규/MNP
+# 		result14 = wks.acell('F14').value # 광랜동판 TV베이직 모바일 재가입/정책기변
+# 		result15 = wks.acell('E15').value # 광기가동판 TV베이직 모바일 신규/MNP
+# 		result16 = wks.acell('F15').value # 광기가동판 TV베이직 모바일 재가입/정책기변
+# 		result17 = wks.acell('E16').value # 광기가동판 TV베이직 모바일 신규/MNP
+# 		result18 = wks.acell('F16').value # 광기가동판 TV베이직 모바일 재가입/정책기변
+# 		result19 = wks.acell('AD3').value # 상품권추가
+# 		result20 = wks.acell('AI3').value # IOT추가
+# 		result21 = wks.acell('AK3').value # 셋탑추가
+# 		result22 = wks.acell('AM3').value # TV프리2추가
+# 		result23 = wks.acell('AD6').value # 동판 상품권금액
+# 		result24 = wks.acell('AI6').value # 동판 IOT추가
+# 		result25 = wks.acell('AK6').value # 동판 , 후결합 셋탑추가
+# 		result26 = wks.acell('AM6').value # 동판 TV프리2추가
+# 		result27 = wks.acell('AO3').value # 단독 TV프리2 설명
+# 		result28 = wks.acell('AO6').value # 단독 TV프리2 프리미엄
+# 		result29 = wks.acell('AO7').value # 단독 TV프리2 설명
+# 		result30 = wks.acell('AU3').value # 단독 TV프리2 설명
+# 		result31 = wks.acell('AU6').value # 단독 TV프리2 설명
+# 		result32 = wks.acell('As3').value # 안정화
+# 		result33 = wks.acell('As6').value # 안정화
 
-		embed = discord.Embed(
-			title='🌐 유선 후결합 동판 정책',
-			description= '```정책 적용 일시내 모바일 개통 및 설치, 결합시 적용```',
-			color=0x00ffff
-			)
-		embed.add_field(
-			name="⌛ 유선 적용 일시",
-			value='```' + result + '```',
-			inline = False
-			)
-		embed.add_field(
-			name="⌛ 무선 적용 일시",
-			value='```' + result0 + '```',
-			inline = False
-			)
-		embed.add_field(
-			name="📍 유의사항",
-			value='```diff\n-■ 본사 사은품은 3년약정 동판시 지급\n-■ 소호 동판은 개인사업자만 가능(법인 결합 불가)\n-■ (정상요금8회) 미만 요금 납부 후 해지시 수수료 환수\n-■ 해지후 재가입시 수수료 전액 환수\n-  (동일장소 재설치및 가족명의 등)```',
-			inline = False
-			)
-		embed.add_field(
-			name= result19,
-			value='```' + result23 + '```',
-			inline = False
-			)
-		embed.add_field(
-			name= result20,
-			value='```' + result24 + '```',
-			inline = False
-			)
-		embed.add_field(
-			name= result21,
-			value='```' + result25 + '```',
-			inline = False
-			)
-		embed.add_field(
-			name= result22,
-			value='```' + result26 + '```',
-			inline = False
-			)
-		embed.add_field(
-			name= result27,
-			value='```' + result28 +"\n"+ result29 + '```',
-			inline = False
-			)
-		embed.add_field(
-			name= result30,
-			value='```' + result31 + '```',
-			inline = False
-			)
-		embed.add_field(
-			name= result32,
-			value='```diff\n' + result33 + '```',
-			inline = False
-			)					
-		embed1 = discord.Embed(
-			title='',
-			description= '```-------------💚광기가(1기가)-------------```',
-			color=0x83ff30
-			)
-		embed1.add_field(
-			name="TV상품",
-			value='```💚TV(17↑)```',
-			inline = True
-			)
-		embed1.add_field(
-			name="모바일( 신규/MNP )",
-			value='```' + result1 + '```',
-			inline = True
-			)
-		embed1.add_field(
-			name="모바일(재가입/기변)",
-			value='```' + result2 + '```',
-			inline = True
-			)
-		embed1 = discord.Embed(
-			title='',
-			description= '```-------------💚광기가(1기가)-------------```',
-			color=0x83ff30
-			)
-		embed1.add_field(
-			name="TV상품",
-			value='```💚TV(17↑)```',
-			inline = True
-			)
-		embed1.add_field(
-			name="모바일( 신규/MNP )",
-			value='```' + result1 + '```',
-			inline = True
-			)
-		embed1.add_field(
-			name="모바일(재가입/기변)",
-			value='```' + result2 + '```',
-			inline = True
-			)
-		embed1.add_field(
-			name="TV상품",
-			value='```💚TV(프리미엄)```',
-			inline = True
-			)
-		embed1.add_field(
-			name="모바일( 신규/MNP )",
-			value='```' + result3 + '```',
-			inline = True
-			)
-		embed1.add_field(
-			name="모바일(재가입/기변)",
-			value='```' + result4 + '```',
-			inline = True
-			)
-		embed1.add_field(
-			name="TV상품",
-			value='```💚TV(베이직)```',
-			inline = True
-			)
-		embed1.add_field(
-			name="모바일( 신규/MNP )",
-			value='```' + result5 + '```',
-			inline = True
-			)
-		embed1.add_field(
-			name="모바일(재가입/기변)",
-			value='```' + result6 + '```',
-			inline = True
-			)
-		embed2 = discord.Embed(
-			title='',
-			description= '```-------------💛슬림(500메가)-------------```',
-			color=0xf9ff27
-			)
-		embed2.add_field(
-			name="TV상품",
-			value='```💛TV(17↑)```',
-			inline = True
-			)
-		embed2.add_field(
-			name="모바일( 신규/MNP )",
-			value='```' + result7 + '```',
-			inline = True
-			)
-		embed2.add_field(
-			name="모바일(재가입/기변)",
-			value='```' + result8 + '```',
-			inline = True
-			)
-		embed2.add_field(
-			name="TV상품",
-			value='```💛TV(프리미엄)```',
-			inline = True
-			)
-		embed2.add_field(
-			name="모바일( 신규/MNP )",
-			value='```' + result9 + '```',
-			inline = True
-			)
-		embed2.add_field(
-			name="모바일(재가입/기변)",
-			value='```' + result10 + '```',
-			inline = True
-			)
-		embed2.add_field(
-			name="TV상품",
-			value='```💛TV(베이직)```',
-			inline = True
-			)
-		embed2.add_field(
-			name="모바일( 신규/MNP )",
-			value='```' + result11 + '```',
-			inline = True
-			)
-		embed2.add_field(
-			name="모바일(재가입/기변)",
-			value='```' + result12 + '```',
-			inline = True
-			)
-		embed3 = discord.Embed(
-			title='',
-			description= '```-------------💙광랜(100메가)-------------```',
-			color=0x3862ff
-			)
-		embed3.add_field(
-			name="TV상품",
-			value='```💙TV(17↑)```',
-			inline = True
-			)
-		embed3.add_field(
-			name="모바일( 신규/MNP )",
-			value='```' + result13 + '```',
-			inline = True
-			)
-		embed3.add_field(
-			name="모바일(재가입/기변)",
-			value='```' + result14 + '```',
-			inline = True
-			)
-		embed3.add_field(
-			name="TV상품",
-			value='```💙TV(프리미엄)```',
-			inline = True
-			)
-		embed3.add_field(
-			name="모바일( 신규/MNP )",
-			value='```' + result15 + '```',
-			inline = True
-			)
-		embed3.add_field(
-			name="모바일(재가입/기변)",
-			value='```' + result16 + '```',
-			inline = True
-			)
-		embed3.add_field(
-			name="TV상품",
-			value='```💙TV(베이직)```',
-			inline = True
-			)
-		embed3.add_field(
-			name="모바일( 신규/MNP )",
-			value='```' + result17 + '```',
-			inline = True
-			)
-		embed3.add_field(
-			name="모바일(재가입/기변)",
-			value='```' + result18 + '```',
-			inline = True
-			)
-		await message.channel.send(embed=embed)
-		await message.channel.send(embed=embed1)
-		await message.channel.send(embed=embed2)
-		await message.channel.send(embed=embed3)
+# 		embed = discord.Embed(
+# 			title='🌐 유선 후결합 동판 정책',
+# 			description= '```정책 적용 일시내 모바일 개통 및 설치, 결합시 적용```',
+# 			color=0x00ffff
+# 			)
+# 		embed.add_field(
+# 			name="⌛ 유선 적용 일시",
+# 			value='```' + result + '```',
+# 			inline = False
+# 			)
+# 		embed.add_field(
+# 			name="⌛ 무선 적용 일시",
+# 			value='```' + result0 + '```',
+# 			inline = False
+# 			)
+# 		embed.add_field(
+# 			name="📍 유의사항",
+# 			value='```diff\n-■ 본사 사은품은 3년약정 동판시 지급\n-■ 소호 동판은 개인사업자만 가능(법인 결합 불가)\n-■ (정상요금8회) 미만 요금 납부 후 해지시 수수료 환수\n-■ 해지후 재가입시 수수료 전액 환수\n-  (동일장소 재설치및 가족명의 등)```',
+# 			inline = False
+# 			)
+# 		embed.add_field(
+# 			name= result19,
+# 			value='```' + result23 + '```',
+# 			inline = False
+# 			)
+# 		embed.add_field(
+# 			name= result20,
+# 			value='```' + result24 + '```',
+# 			inline = False
+# 			)
+# 		embed.add_field(
+# 			name= result21,
+# 			value='```' + result25 + '```',
+# 			inline = False
+# 			)
+# 		embed.add_field(
+# 			name= result22,
+# 			value='```' + result26 + '```',
+# 			inline = False
+# 			)
+# 		embed.add_field(
+# 			name= result27,
+# 			value='```' + result28 +"\n"+ result29 + '```',
+# 			inline = False
+# 			)
+# 		embed.add_field(
+# 			name= result30,
+# 			value='```' + result31 + '```',
+# 			inline = False
+# 			)
+# 		embed.add_field(
+# 			name= result32,
+# 			value='```diff\n' + result33 + '```',
+# 			inline = False
+# 			)					
+# 		embed1 = discord.Embed(
+# 			title='',
+# 			description= '```-------------💚광기가(1기가)-------------```',
+# 			color=0x83ff30
+# 			)
+# 		embed1.add_field(
+# 			name="TV상품",
+# 			value='```💚TV(17↑)```',
+# 			inline = True
+# 			)
+# 		embed1.add_field(
+# 			name="모바일( 신규/MNP )",
+# 			value='```' + result1 + '```',
+# 			inline = True
+# 			)
+# 		embed1.add_field(
+# 			name="모바일(재가입/기변)",
+# 			value='```' + result2 + '```',
+# 			inline = True
+# 			)
+# 		embed1 = discord.Embed(
+# 			title='',
+# 			description= '```-------------💚광기가(1기가)-------------```',
+# 			color=0x83ff30
+# 			)
+# 		embed1.add_field(
+# 			name="TV상품",
+# 			value='```💚TV(17↑)```',
+# 			inline = True
+# 			)
+# 		embed1.add_field(
+# 			name="모바일( 신규/MNP )",
+# 			value='```' + result1 + '```',
+# 			inline = True
+# 			)
+# 		embed1.add_field(
+# 			name="모바일(재가입/기변)",
+# 			value='```' + result2 + '```',
+# 			inline = True
+# 			)
+# 		embed1.add_field(
+# 			name="TV상품",
+# 			value='```💚TV(프리미엄)```',
+# 			inline = True
+# 			)
+# 		embed1.add_field(
+# 			name="모바일( 신규/MNP )",
+# 			value='```' + result3 + '```',
+# 			inline = True
+# 			)
+# 		embed1.add_field(
+# 			name="모바일(재가입/기변)",
+# 			value='```' + result4 + '```',
+# 			inline = True
+# 			)
+# 		embed1.add_field(
+# 			name="TV상품",
+# 			value='```💚TV(베이직)```',
+# 			inline = True
+# 			)
+# 		embed1.add_field(
+# 			name="모바일( 신규/MNP )",
+# 			value='```' + result5 + '```',
+# 			inline = True
+# 			)
+# 		embed1.add_field(
+# 			name="모바일(재가입/기변)",
+# 			value='```' + result6 + '```',
+# 			inline = True
+# 			)
+# 		embed2 = discord.Embed(
+# 			title='',
+# 			description= '```-------------💛슬림(500메가)-------------```',
+# 			color=0xf9ff27
+# 			)
+# 		embed2.add_field(
+# 			name="TV상품",
+# 			value='```💛TV(17↑)```',
+# 			inline = True
+# 			)
+# 		embed2.add_field(
+# 			name="모바일( 신규/MNP )",
+# 			value='```' + result7 + '```',
+# 			inline = True
+# 			)
+# 		embed2.add_field(
+# 			name="모바일(재가입/기변)",
+# 			value='```' + result8 + '```',
+# 			inline = True
+# 			)
+# 		embed2.add_field(
+# 			name="TV상품",
+# 			value='```💛TV(프리미엄)```',
+# 			inline = True
+# 			)
+# 		embed2.add_field(
+# 			name="모바일( 신규/MNP )",
+# 			value='```' + result9 + '```',
+# 			inline = True
+# 			)
+# 		embed2.add_field(
+# 			name="모바일(재가입/기변)",
+# 			value='```' + result10 + '```',
+# 			inline = True
+# 			)
+# 		embed2.add_field(
+# 			name="TV상품",
+# 			value='```💛TV(베이직)```',
+# 			inline = True
+# 			)
+# 		embed2.add_field(
+# 			name="모바일( 신규/MNP )",
+# 			value='```' + result11 + '```',
+# 			inline = True
+# 			)
+# 		embed2.add_field(
+# 			name="모바일(재가입/기변)",
+# 			value='```' + result12 + '```',
+# 			inline = True
+# 			)
+# 		embed3 = discord.Embed(
+# 			title='',
+# 			description= '```-------------💙광랜(100메가)-------------```',
+# 			color=0x3862ff
+# 			)
+# 		embed3.add_field(
+# 			name="TV상품",
+# 			value='```💙TV(17↑)```',
+# 			inline = True
+# 			)
+# 		embed3.add_field(
+# 			name="모바일( 신규/MNP )",
+# 			value='```' + result13 + '```',
+# 			inline = True
+# 			)
+# 		embed3.add_field(
+# 			name="모바일(재가입/기변)",
+# 			value='```' + result14 + '```',
+# 			inline = True
+# 			)
+# 		embed3.add_field(
+# 			name="TV상품",
+# 			value='```💙TV(프리미엄)```',
+# 			inline = True
+# 			)
+# 		embed3.add_field(
+# 			name="모바일( 신규/MNP )",
+# 			value='```' + result15 + '```',
+# 			inline = True
+# 			)
+# 		embed3.add_field(
+# 			name="모바일(재가입/기변)",
+# 			value='```' + result16 + '```',
+# 			inline = True
+# 			)
+# 		embed3.add_field(
+# 			name="TV상품",
+# 			value='```💙TV(베이직)```',
+# 			inline = True
+# 			)
+# 		embed3.add_field(
+# 			name="모바일( 신규/MNP )",
+# 			value='```' + result17 + '```',
+# 			inline = True
+# 			)
+# 		embed3.add_field(
+# 			name="모바일(재가입/기변)",
+# 			value='```' + result18 + '```',
+# 			inline = True
+# 			)
+# 		await message.channel.send(embed=embed)
+# 		await message.channel.send(embed=embed1)
+# 		await message.channel.send(embed=embed2)
+# 		await message.channel.send(embed=embed3)
 
 		
 		
